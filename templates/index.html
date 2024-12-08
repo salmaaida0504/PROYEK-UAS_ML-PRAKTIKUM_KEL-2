@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Game Warrior Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Game Warrior Template">
+	<meta name="keywords" content="warrior, game, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='') }}css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='') }}css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='') }}css/owl.carousel.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='') }}css/style.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='') }}css/animate.css"/>
+
+	<style>
+		.search-bar,
+		.filter-bar {
+			display: flex;
+			justify-content: center; /* Horizontal center */
+			align-items: center;    /* Vertical center */
+			margin: 20px 0;         /* Tambahkan jarak di atas dan bawah */
+		}
+		
+		.search-bar input[type="text"],
+		.filter-bar select {
+			width: 300px;           /* Ukuran lebar input dan select */
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px 0 0 4px; /* Sudut melengkung pada kiri */
+			font-size: 14px;
+		}
+		
+		.search-bar .search-btn,
+		.filter-bar .filter-btn {
+			padding: 10px 20px;
+			border: none;
+			background-color: #007BFF; /* Warna tombol */
+			color: white;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 0 4px 4px 0; /* Sudut melengkung pada kanan */
+		}
+		
+		.search-bar .search-btn:hover,
+		.filter-bar .filter-btn:hover {
+			background-color: #0056b3; /* Warna tombol saat hover */
+		}
+		
+		.filter-bar select {
+			margin-right: 10px;     /* Spasi antar dropdown */
+			border-radius: 4px;     /* Sudut melengkung penuh */
+		}
+		
+		.filter-bar .filter-btn {
+			border-radius: 4px;     /* Sudut melengkung penuh */
+			margin-left: 10px;      /* Spasi tombol filter */
+		}
+		</style>
+		
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+			<a class="site-logo" href="index.html">
+				<img src="{{ url_for('static', filename="img/logo.png") }}" alt="">
+			</a>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<!-- site menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="review.html">Games</a></li>
+					<li><a href="categories.html">Blog</a></li>
+					<li><a href="community.html">Forums</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{{ url_for('static', filename='img/slider-1.jpg') }}">
+				<div class="hs-text">
+					<div class="container">
+						<h2>The Best <span>Games</span> Out There</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
+						<a href="#" class="site-btn">Read More</a>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="{{ url_for('static', filename='img/slider-2.jpg') }}">
+				<div class="hs-text">
+					<div class="container">
+						<h2>The Best <span>Games</span> Out There</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
+						<a href="#" class="site-btn">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+
+	<!-- Latest news section -->
+	<div class="latest-news-section">
+		<div class="ln-title">Latest News</div>
+		<div class="news-ticker">
+			<div class="news-ticker-contant">
+				<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+				<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+				<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+			</div>
+		</div>
+	</div>
+	<!-- Latest news section end -->
+
+
+	<!-- Feature section -->
+	<section class="feature-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 p-0">
+					<div class="feature-item set-bg" data-setbg="{{ url_for('static', filename='img/features/1.jpg') }}">
+						<span class="cata new">new</span>
+						<div class="fi-content text-white">
+							<h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							<a href="#" class="fi-comment">3 Comments</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 p-0">
+					<div class="feature-item set-bg" data-setbg="{{ url_for('static', filename='img/features/2.jpg') }}">
+						<span class="cata strategy">strategy</span>
+						<div class="fi-content text-white">
+							<h5><a href="#">Justo tempor, rutrum erat id, molestie</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							<a href="#" class="fi-comment">3 Comments</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 p-0">
+					<div class="feature-item set-bg" data-setbg="{{ url_for('static', filename='img/features/3.jpg') }}">
+						<span class="cata new">new</span>
+						<div class="fi-content text-white">
+							<h5><a href="#">Nullam lacinia ex eleifend orci porttitor</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							<a href="#" class="fi-comment">3 Comments</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 p-0">
+					<div class="feature-item set-bg" data-setbg="{{ url_for('static', filename='img/features/4.jpg') }}">
+						<span class="cata racing">racing</span>
+						<div class="fi-content text-white">
+							<h5><a href="#">Lacinia ex eleifend orci suscipit</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							<a href="#" class="fi-comment">3 Comments</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Feature section end -->
+
+
+	<!-- Recent game section  -->
+	<section class="recent-game-section spad set-bg" data-setbg="{{ url_for('static', filename='img/recent-game-bg.png') }}">
+		<div class="container">
+			<div class="section-title">
+				<h2>Games Recommendation</h2>
+			</div>
+			<!-- Pilihan metode rekomendasi -->
+			<div class="choose-method">
+				<form action="{{ url_for('recommend') }}" method="POST">
+					<!-- Rekomendasi berdasarkan nama -->
+					<div class="search-bar">
+						<input type="text" name="game_name" placeholder="Search Games by Name" required>
+						<button type="submit" class="search-btn">Search</button>
+					</div>
+				</form>
+				<hr>
+				<!-- Rekomendasi berdasarkan kategori -->
+				<form action="{{ url_for('recommend_by_category') }}" method="POST">
+					<div class="filter-bar">
+						<select name="platform" required>
+							<option value="" disabled selected>Choose Platform</option>
+							<option value="Wii">Wii</option>
+							<option value="DS">DS</option>
+							<option value="X360">X360</option>
+							<option value="PS3">PS3</option>
+							<option value="PS2">PS2</option>
+							<option value="3DS">3DS</option>
+							<option value="PS4">PS4</option>
+							<option value="PS">PS</option>
+							<option value="XB">XB</option>
+							<option value="PC">PC</option>
+							<option value="PSP">PSP</option>
+							<option value="WiiU">WiiU</option>
+							<option value="PS2">GC</option>
+							<option value="GBA">GBA</option>
+							<option value="XOne">XOne</option>
+							<option value="PSV">PSV</option>
+							<option value="DC">DC</option>
+							<!-- Tambahkan platform lainnya -->
+						</select>
+						<select name="genre" required>
+							<option value="" disabled selected>Choose Genre</option>
+							<option value="Action">Action</option>
+							<option value="Adventure">Adventure</option>
+							<option value="Fighting">Fighting</option>
+							<option value="Misc">Misc</option>
+							<option value="Platform">Platform</option>
+							<option value="Puzzle">Puzzle</option>
+							<option value="Racing">Racing</option>
+							<option value="Role-Playing">Role-Playing</option>
+							<option value="Shooter">Shooter</option>
+							<option value="Simulation">Simulation</option>
+							<option value="Sports">Sports</option>
+							<option value="Strategy">Strategy</option>
+							<!-- Tambahkan genre lainnya -->
+						</select>
+						<select name="rating" required>
+							<option value="" disabled selected>Choose Rating</option>
+							<option value="E">E</option>
+							<option value="T">T</option>
+							<option value="M">M</option>
+							<option value="E10+">E10+</option>
+							<option value="K-A">K-A</option>
+							<option value="AO">AO</option>
+							<!-- Tambahkan rating lainnya -->
+						</select>
+						<button type="submit" class="filter-btn">Filter</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Recent game section end -->
+
+
+	<!-- Tournaments section -->
+	<section class="tournaments-section spad">
+		<div class="container">
+			<div class="tournament-title">Tournaments</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="tournament-item mb-4 mb-lg-0">
+						<div class="ti-notic">Premium Tournament</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" data-setbg="{{ url_for('static', filename='img/tournament/1.jpg') }}"></div>
+							<div class="ti-text">
+								<h4>World Of WarCraft</h4>
+								<ul>
+									<li><span>Tournament Beggins:</span> June 20, 2018</li>
+									<li><span>Tounament Ends:</span> July 01, 2018</li>
+									<li><span>Participants:</span> 10 teams</li>
+									<li><span>Tournament Author:</span> Admin</li>
+								</ul>
+								<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="tournament-item">
+						<div class="ti-notic">Premium Tournament</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" data-setbg="{{ url_for('static', filename='img/tournament/2.jpg') }}"></div>
+							<div class="ti-text">
+								<h4>DOOM</h4>
+								<ul>
+									<li><span>Tournament Beggins:</span> June 20, 2018</li>
+									<li><span>Tounament Ends:</span> July 01, 2018</li>
+									<li><span>Participants:</span> 10 teams</li>
+									<li><span>Tournament Author:</span> Admin</li>
+								</ul>
+								<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Tournaments section bg -->
+
+
+	<!-- Review section -->
+	<section class="review-section spad set-bg" data-setbg="{{ url_for('static', filename='img/review-bg.png') }}">
+		<div class="container">
+			<div class="section-title">
+				<div class="cata new">new</div>
+				<h2>Recent Reviews</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="{{ url_for('static', filename='img/review/1.jpg') }}">
+							<div class="score yellow">9.3</div>
+						</div>
+						<div class="review-text">
+							<h5>Assasin’’s Creed</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="{{ url_for('static', filename='img/review/2.jpg') }}">
+							<div class="score purple">9.5</div>
+						</div>
+						<div class="review-text">
+							<h5>Doom</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="{{ url_for('static', filename='img/review/3.jpg') }}">
+							<div class="score green">9.1</div>
+						</div>
+						<div class="review-text">
+							<h5>Overwatch</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="{{ url_for('static', filename='img/review/4.jpg') }}">
+							<div class="score pink">9.7</div>
+						</div>
+						<div class="review-text">
+							<h5>GTA</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Review section end -->
+
+
+	<!-- Footer top section -->
+	<section class="footer-top-section">
+		<div class="container">
+			<div class="footer-top-bg">
+				<img src="img/footer-top-bg.png" alt="">
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="footer-logo text-white">
+						<img src="img/footer-logo.png" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget mb-5 mb-md-0">
+						<h4 class="fw-title">Latest Posts</h4>
+						<div class="latest-blog">
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{{ url_for('static', filename='img/latest-blog/1.jpg') }}"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{{ url_for('static', filename='img/latest-blog/2.jpg') }}"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{{ url_for('static', filename='img/latest-blog/3.jpg') }}"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget">
+						<h4 class="fw-title">Top Comments</h4>
+						<div class="top-comment">
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{{ url_for('static', filename='img/authors/1.jpg') }}"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{{ url_for('static', filename='img/authors/2.jpg') }}"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{{ url_for('static', filename='img/authors/3.jpg') }}"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{{ url_for('static', filename='img/authors/4.jpg') }}"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer top section end -->
+
+	
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="review.html">Games</a></li>
+				<li><a href="categories.html">Blog</a></li>
+				<li><a href="community.html">Forums</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.marquee.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	<script>
+		// Menambahkan fungsionalitas pencarian
+		document.querySelector('.search-btn').addEventListener('click', function() {
+			var searchTerm = document.querySelector('.search-bar input[type="text"]').value;
+			if (searchTerm) {
+				alert('You searched for: ' + searchTerm);
+			}
+		});
+	  </script>
+    </body>
+</html>
