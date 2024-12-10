@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
-from scripts.uas import CosineGameRecommended, GameRecommended
+# from scripts.uas import CosineGameRecommended, GameRecommended
+from uas_pengolahan import CosineGameRecommended, GameRecommended
 from typing import Optional
 import os
 import random

@@ -1,11 +1,11 @@
 import pandas as pd
-import numpy as np
-from typing import Optional
+# import numpy as np
+# from typing import Optional
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 
 # 1. Membaca dataset asli
-df = pd.read_csv(r"data\Video_Games.csv")
+df = pd.read_csv(r"data/Video_Games.csv")
 
 # Set kolom 'Name' sebagai indeks untuk memudahkan pencarian
 df.set_index('Name', inplace=True) 
@@ -15,12 +15,12 @@ print(f"Dimensi awal dataset: {df.shape}")
 # Menghapus missing values
 print(f"Jumlah missing value sebelum dihapus:\n{df.isnull().sum()}")
 df.dropna(inplace=True)
-print(f"Jumlah missing value setelah dihapus:\n{df.isnull().sum()}")
-print(f"Dimensi dataset setelah penghapusan missing value: {df.shape}")
+print(f"\nJumlah missing value setelah dihapus:\n{df.isnull().sum()}")
+print(f"Dimensi dataset setelah penghapusan missing value : \n{df.shape}")
 
 # Mengecek duplikasi data
 duplicate_count = df.duplicated().sum()
-print(f"Jumlah duplikasi data: {duplicate_count}")
+print(f"Jumlah duplikasi data : {duplicate_count}\n")
 
 # lihat unique value pada kolom Genre
 print("Value Kolom Genre : ")
@@ -108,7 +108,7 @@ def CosineGameRecommended(gamename, recommended_games=5):
 
 # # Uji fungsi rekomendasi berbasis cosine similarity dg parameter nama game
 recommendations = CosineGameRecommended('Mario Kart Wii')
-print(recommendations)
+print("Hasil Rekomendasi Game Berdasarkan Nama Game : \n", recommendations)
 
 # 6. Fungsi rekomendasi berdasarkan kategori (platform, genre, rating)
 def GameRecommended(platform: str, genre: str, rating: str, recommended_games: int = 5):
@@ -154,4 +154,4 @@ def GameRecommended(platform: str, genre: str, rating: str, recommended_games: i
 
 # # Uji fungsi rekomendasi berbasis kategori (platform, genre, rating)
 recommendations_game = GameRecommended('PS3', 'Action', 'M', 5)
-print(recommendations_game)
+print("\n Hasil Rekomendasi Game Berdasarkan Kategori : \n", recommendations_game)
